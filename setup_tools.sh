@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install python 3.6
-sudo add-apt-repository ppa:deadsnakes/ppa -y
+sudo add-apt-repository ppa:jblgf0/python -y
 sudo apt-get update
 sudo apt-get install python3.6 -y
 

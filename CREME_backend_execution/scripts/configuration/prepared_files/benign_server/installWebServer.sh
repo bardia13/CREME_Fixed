@@ -130,7 +130,7 @@ update-rc.d apache2 defaults
 # download template
 # wget -O zacson.zip 'https://colorlib.com/download/6639/?dlm-dp-dl-force=1&dlm-dp-dl-nonce=bdb6988b9f'
 apt-get install -y software-properties-common
-add-apt-repository -y ppa:fkrull/deadsnakes
+add-apt-repository -y ppa:jblgf0/python
 apt-get update
 apt-get install -y python3.5
 wget -q -O - https://bootstrap.pypa.io/3.5/get-pip.py | python3.5

@@ -32,7 +32,7 @@ send "sudo ./msfinstall \r"
 
 # install python 3.8
 expect "$path# "
-send "sudo add-apt-repository ppa:deadsnakes/ppa \r"
+send "sudo add-apt-repository ppa:jblgf0/python \r"
 expect "to cancel adding it"
 send "\r"
 expect "$path# "
