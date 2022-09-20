@@ -22,6 +22,8 @@ send "cd $path\r"
 
 # install metasploit
 expect "$path# "
+send "sudo apt update -y\r"
+expect "$path# "
 send "sudo apt install curl -y\r"
 expect "$path# "
 send "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall \r"
