@@ -42,7 +42,13 @@ class ScriptHelper:
         cmd += " {0}".format(del_known_hosts_path)
         for parameter in parameters:
             cmd += " {0}".format(parameter)
-        print(cmd) if show_cmd else os.system(cmd)
+        if show_cmd:
+            print(cmd)
+        else:
+            result = os.system(cmd)
+            if result != 0 :
+                raise Exception(f"Command Failed:-----> {cmd}")
+        # print(cmd) if show_cmd else os.system(cmd)
 
 
 class DownloadDataHelper:
