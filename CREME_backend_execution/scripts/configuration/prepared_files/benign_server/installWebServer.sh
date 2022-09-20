@@ -134,15 +134,15 @@ add-apt-repository -y ppa:jblgf0/python
 apt-get update
 apt-get install -y python3.5
 wget -q -O - https://bootstrap.pypa.io/3.5/get-pip.py | python3.5
-pip3 install gdown
-gdown https://drive.google.com/uc?id=10hWuXEte-xlUE64_kOznOwDlEBxB4-oa
-# sudo chown server:server zacson.zip
-unzip zacson.zip -d zacson
+# pip3 install gdown
+# gdown https://drive.google.com/uc?id=10hWuXEte-xlUE64_kOznOwDlEBxB4-oa
+# # sudo chown server:server zacson.zip
+# unzip zacson.zip -d zacson
 
-# change /var/www/html group premission
-find zacson/zacson -type d -print0 | xargs -0 chmod 0755
-find zacson/zacson -type f -print0 | xargs -0 chmod 0644
+# # change /var/www/html group premission
+# find zacson/zacson -type d -print0 | xargs -0 chmod 0755
+# find zacson/zacson -type f -print0 | xargs -0 chmod 0644
 
-rm -r /var/www/html/*
-cp -r ./zacson/zacson/* /var/www/html
-chown -R $USERNAME:www-data /var/www/html
+# rm -r /var/www/html/*
+# cp -r ./zacson/zacson/* /var/www/html
+# chown -R $USERNAME:www-data /var/www/html
