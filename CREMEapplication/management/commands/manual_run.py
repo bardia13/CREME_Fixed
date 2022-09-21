@@ -4,7 +4,7 @@ from CREMEapplication.tasks_minimal import create_creme_object, update_testbed_s
 
 
 
-class RunCommand(BaseCommand):
+class Command(BaseCommand):
     def handle(self, *args, **options):
         creme = create_creme_object()
         print("Executing full run based on the data available in the dataset ...")
