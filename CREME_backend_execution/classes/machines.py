@@ -6,7 +6,7 @@ from .interfaces import IConfiguration, IConfigurationCommon, IConfigurationAtta
     IRansomwareAttackerServer, IResourceHijackingAttackerServer, IEndPointDosAttackerServer, IDataTheftAttackerServer,\
     IRootkitRansomwareAttackerServer, ICleaningDataCollection
 from .helper import ScriptHelper, OtherHelper
-from .CREME import Creme
+from .CREME_Minimal import CremeMinimal
 import time
 
 
@@ -171,19 +171,19 @@ class VulnerableClient(DataLoggerClient, implements(IConfiguration), implements(
         self.configure_base()
         self.configure_data_collection()
         self.configure_benign_services()
-        if Creme.mirai:
+        if CremeMinimal.mirai:
             self.configure_mirai()
-        if Creme.ransomware:
+        if CremeMinimal.ransomware:
             self.configure_ransomware()
-        if Creme.resource_hijacking:
+        if CremeMinimal.resource_hijacking:
             self.configure_resource_hijacking()
-        if Creme.disk_wipe:
+        if CremeMinimal.disk_wipe:
             self.configure_disk_wipe()
-        if Creme.end_point_dos:
+        if CremeMinimal.end_point_dos:
             self.configure_end_point_dos()
-        if Creme.data_theft:
+        if CremeMinimal.data_theft:
             self.configure_data_theft()
-        if Creme.rootkit_ransomware:
+        if CremeMinimal.rootkit_ransomware:
             self.configure_rootkit_ransomware()
 
     def configure_base(self):
@@ -324,19 +324,19 @@ class TargetServer(DataLoggerClient, implements(IConfiguration), implements(ICon
         self.configure_base()
         self.configure_data_collection()
         self.configure_benign_services()
-        if Creme.mirai:
+        if CremeMinimal.mirai:
             self.configure_mirai()
-        if Creme.ransomware:
+        if CremeMinimal.ransomware:
             self.configure_ransomware()
-        if Creme.resource_hijacking:
+        if CremeMinimal.resource_hijacking:
             self.configure_resource_hijacking()
-        if Creme.disk_wipe:
+        if CremeMinimal.disk_wipe:
             self.configure_disk_wipe()
-        if Creme.end_point_dos:
+        if CremeMinimal.end_point_dos:
             self.configure_end_point_dos()
-        if Creme.data_theft:
+        if CremeMinimal.data_theft:
             self.configure_data_theft()
-        if Creme.rootkit_ransomware:
+        if CremeMinimal.rootkit_ransomware:
             self.configure_rootkit_ransomware()
         self.reboot()
         self.wait_machine_up()
@@ -559,23 +559,23 @@ class AttackerServer(Machine, implements(IConfiguration), implements(IConfigurat
     def configure(self):
         self.configure_base()
         self.configure_data_collection()
-        if Creme.mirai:
+        if CremeMinimal.mirai:
             self.configure_mirai()
-        if Creme.ransomware or Creme.resource_hijacking or Creme.disk_wipe or Creme.end_point_dos or \
-                Creme.data_theft or Creme.rootkit_ransomware:
+        if CremeMinimal.ransomware or CremeMinimal.resource_hijacking or CremeMinimal.disk_wipe or CremeMinimal.end_point_dos or \
+                CremeMinimal.data_theft or CremeMinimal.rootkit_ransomware:
             self.configure_pymetasploit()
             self.configure_apache2()
-        if Creme.ransomware:
+        if CremeMinimal.ransomware:
             self.configure_ransomware()
-        if Creme.resource_hijacking:
+        if CremeMinimal.resource_hijacking:
             self.configure_resource_hijacking()
-        if Creme.disk_wipe:
+        if CremeMinimal.disk_wipe:
             self.configure_disk_wipe()
-        if Creme.end_point_dos:
+        if CremeMinimal.end_point_dos:
             self.configure_end_point_dos()
-        if Creme.data_theft:
+        if CremeMinimal.data_theft:
             self.configure_data_theft()
-        if Creme.rootkit_ransomware:
+        if CremeMinimal.rootkit_ransomware:
             self.configure_rootkit_ransomware()
 
     def configure_base(self):
@@ -869,23 +869,23 @@ class MaliciousClient(Machine, implements(IConfiguration), implements(IConfigura
     def configure(self):
         self.configure_base()
         self.configure_data_collection()
-        if Creme.mirai:
+        if CremeMinimal.mirai:
             self.configure_mirai()
-        if Creme.ransomware or Creme.resource_hijacking or Creme.disk_wipe or Creme.end_point_dos or \
-                Creme.data_theft or Creme.rootkit_ransomware:
+        if CremeMinimal.ransomware or CremeMinimal.resource_hijacking or CremeMinimal.disk_wipe or CremeMinimal.end_point_dos or \
+                CremeMinimal.data_theft or CremeMinimal.rootkit_ransomware:
             self.configure_pymetasploit()
             self.configure_apache2()
-        if Creme.ransomware:
+        if CremeMinimal.ransomware:
             self.configure_ransomware()
-        if Creme.resource_hijacking:
+        if CremeMinimal.resource_hijacking:
             self.configure_resource_hijacking()
-        if Creme.disk_wipe:
+        if CremeMinimal.disk_wipe:
             self.configure_disk_wipe()
-        if Creme.end_point_dos:
+        if CremeMinimal.end_point_dos:
             self.configure_end_point_dos()
-        if Creme.data_theft:
+        if CremeMinimal.data_theft:
             self.configure_data_theft()
-        if Creme.rootkit_ransomware:
+        if CremeMinimal.rootkit_ransomware:
             self.configure_rootkit_ransomware()
 
     def configure_base(self):

@@ -4,6 +4,6 @@ from CREMEapplication.tasks_minimal import create_creme_object
 
 
 
-class RunDiskWipeCommand(BaseCommand):
+class Command(BaseCommand):
     def handle(self, *args, **options):
         pass
