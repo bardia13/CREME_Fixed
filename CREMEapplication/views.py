@@ -306,7 +306,7 @@ def new_testbed_information(request):
 
         create_progress_data_if_not_exist()
 
-        execute_toolchain.delay()
+        # execute_toolchain.delay()
 
         return redirect(DASHBOARD)
     else:
