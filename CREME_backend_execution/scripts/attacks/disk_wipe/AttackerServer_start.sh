@@ -5,6 +5,7 @@ set username [lindex $argv 2]
 set password [lindex $argv 3]
 set path [lindex $argv 4]
 set target_server_ip [lindex $argv 5]
+set pids_file [lindex $argv 6]
 
 set timeout 1200
 
@@ -16,7 +17,12 @@ expect "*continue connecting (yes/no*)? "
 send "yes\r"
 expect " password: "
 send "$password\r"
+# Pymetasploit (Py3)
+expect "*:~# "
+send "msfrpcd -P kali -S \r"
 
+expect "*:~# "
+send "ps -ef | grep 'msfrpcd' | awk '{print \$2}' > $path/$pids_file\r"
 
 expect "*:~# "
 send "python3 $path/disk_wipe.py $path $ip $target_server_ip\r"

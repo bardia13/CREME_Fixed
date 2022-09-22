@@ -156,8 +156,8 @@ class CremeMinimal:
         self.attacker_server.mirai_wait_for_finished_transfer()
         self.attacker_server.mirai_wait_for_finished_ddos()
     def attack_disk_wipe(self):
-        print("Starting metasploit! " + "\033[92m")
-        self.attacker_server.disk_wipe_start_metasploit()
+        # print("Starting metasploit! " + "\033[92m")
+        # self.attacker_server.disk_wipe_start_metasploit()
         # self.attacker_server.disk_wipe_first_stage()
         # self.attacker_server.disk_wipe_second_stage()
         # self.attacker_server.disk_wipe_third_stage()

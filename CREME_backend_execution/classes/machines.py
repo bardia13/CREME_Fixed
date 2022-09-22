@@ -710,7 +710,7 @@ class AttackerServer(Machine, implements(IConfiguration), implements(IConfigurat
 
     def disk_wipe_full_stages(self):
         filename_path = "attacks/disk_wipe/./AttackerServer_start.sh"
-        parameters = [self.ip, self.username, self.password, self.path, self.targeted_attack]
+        parameters = [self.ip, self.username, self.password, self.path, self.targeted_attack, self.killed_pids_file]
         ScriptHelper.execute_script(filename_path, parameters, self.show_cmd)
 
     def disk_wipe_first_stage(self):
