@@ -156,10 +156,13 @@ class CremeMinimal:
         self.attacker_server.mirai_wait_for_finished_transfer()
         self.attacker_server.mirai_wait_for_finished_ddos()
     def attack_disk_wipe(self):
+        print("Starting metasploit! " + "\033[92m")
         self.attacker_server.disk_wipe_start_metasploit()
-        self.attacker_server.disk_wipe_first_stage()
-        self.attacker_server.disk_wipe_second_stage()
-        self.attacker_server.disk_wipe_third_stage()
+        # self.attacker_server.disk_wipe_first_stage()
+        # self.attacker_server.disk_wipe_second_stage()
+        # self.attacker_server.disk_wipe_third_stage()
+        print("Starting Attack! " + "\033[92m")
+        self.attacker_server.disk_wipe_full_stages()
         # wait and record timestamp
         timestamp_folder = os.path.join("CREME_backend_execution", "logs", "disk_wipe", "times")
         timestamp_file = "time_stage_3_end.txt"

@@ -29,7 +29,7 @@ close $outputTimeFile
 
 expect "*:~# " 
 send "nohup $path/./$malicious_file &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 expect "*:~# "

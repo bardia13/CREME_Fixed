@@ -43,7 +43,7 @@ expect "*:~# "
 send "chmod +x $folder/$startatop_file \r"
 expect "*:~# "
 send "nohup $folder/./$startatop_file $folder $atop_file $interval &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 expect "*:~# "

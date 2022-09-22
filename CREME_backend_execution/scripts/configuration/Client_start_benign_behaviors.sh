@@ -29,20 +29,20 @@ send "mkdir $folder/$ftp_folder\r"
 # execute ftp in the backend
 expect "*:~# "
 send "nohup ./clientFtpDownloadUpload.sh $hostname $password $folder/$ftp_folder $sleep_second $domain_name &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 # execute mail in the backend
 expect "*:~# "
 send "nohup ./clientMailSend.sh $target_virtual_account $sleep_second $domain_name &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 #./clientMailSend.sh target_virtual_account sleep_second
 
 # execute web in the backend
 expect "*:~# "
 send "nohup ./clientWebGet.sh $sleep_second $domain_name &\r"
-expect "output to 'nohup.out'"
+expect "*output to 'nohup.out'"
 send "\r"
 
 expect "*:~# "
