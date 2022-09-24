@@ -19,7 +19,7 @@ send "$password\r"
 
 # Pymetasploit (Py3)
 expect "*:~# "
-send "msfrpcd -P kali -S \r"
+send "(msfrpcd -P kali -S) && (sleep(5)) \r"
 
 expect "*:~# "
 send "ps -ef | grep 'msfrpcd' | awk '{print \$2}' > $path/$pids_file\r"
