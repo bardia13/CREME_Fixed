@@ -976,6 +976,6 @@ class CremeMinimal:
             if CremeMinimal.rootkit_ransomware:
                 self.run_rootkit_ransomware()
         # process data
-        if not CremeMinimal.skip_data_processing:
-            data_sources = self.process_data()
+        # if not CremeMinimal.skip_data_processing:
+        #     data_sources = self.process_data()
 
