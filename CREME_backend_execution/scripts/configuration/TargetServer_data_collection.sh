@@ -74,7 +74,7 @@ send "apt install atop -y\r"
 
 # update time
 expect "*:~# "
-send "timedatectl set-timezone Asia/Taipei\r"
+send "timedatectl set-timezone America/Edmonton\r"
 expect "*:~# "
 send "service ntp stop\r"
 expect "*:~# "

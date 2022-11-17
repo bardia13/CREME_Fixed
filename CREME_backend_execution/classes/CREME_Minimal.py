@@ -963,7 +963,7 @@ class CremeMinimal:
             if CremeMinimal.mirai:
                 self.run_mirai()
             if CremeMinimal.disk_wipe:
-                input("Press enter to continue to diskwipe")
+                # input("Press enter to continue to diskwipe")
                 self.run_disk_wipe()
             if CremeMinimal.ransomware:
                 self.run_ransomware()
@@ -976,6 +976,6 @@ class CremeMinimal:
             if CremeMinimal.rootkit_ransomware:
                 self.run_rootkit_ransomware()
         # process data
-        # if not CremeMinimal.skip_data_processing:
-        #     data_sources = self.process_data()
+        if not CremeMinimal.skip_data_processing:
+            data_sources = self.process_data()
 
