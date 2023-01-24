@@ -4,6 +4,7 @@
 sudo add-apt-repository ppa:jblgf0/python -y
 sudo apt-get update
 sudo apt-get install python3.6 -y
+sudo apt-get install python3.7 -y
 
 sudo apt-get update
 sudo apt-get install expect -y
