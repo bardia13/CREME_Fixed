@@ -68,5 +68,9 @@ send "./clientMailInstall.sh $virtual_account $hostname $domain_name $ConfigureF
 # execute mail in the backend
 #./clientMailSend.sh target_virtual_account sleep_second
 
+# change timezone
+expect "*:~# "
+send "sudo timedatectl set-timezone America/Edmonton\r"
+
 expect "*:~# "
 send "exit\r"

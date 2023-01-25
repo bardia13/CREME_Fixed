@@ -29,6 +29,11 @@ send "$password\r"
 
 # configure vulnerable services
 # install and configure vulnerable telnet
+
+# change timezone
+expect "*:~# "
+send "sudo timedatectl set-timezone America/Edmonton"
+
 expect "*:~# "
 send "apt update && apt -y install telnetd\r"
 # download config file from controller

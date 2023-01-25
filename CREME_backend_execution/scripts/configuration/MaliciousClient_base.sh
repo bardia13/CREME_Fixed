@@ -30,6 +30,10 @@ send "apt -y install ntpdate\r"
 expect "*:~# "
 send "sudo ntpdate ntp.ubuntu.com\r"
 
+# change timezone
+expect "*:~# "
+send "sudo timedatectl set-timezone America/Edmonton\r"
+
 # config new dns
 expect "*:~# "
 send "rm ~/.ssh/known_hosts\r"
